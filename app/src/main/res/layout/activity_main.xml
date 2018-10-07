@@ -1,0 +1,157 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="50dp">
+        <ImageView
+            android:id="@+id/ivUp"
+            android:layout_marginLeft="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_keyboard_arrow_up_black_24dp"/>
+        <ImageView
+            android:id="@+id/ivDown"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:layout_below="@id/ivUp"/>
+        <ImageView
+            android:id="@+id/ivLeft"
+            app:layout_constraintRight_toLeftOf="@id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivUp"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="96dp"
+            android:layout_below="@id/ivUp"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="p :"/>
+        <EditText
+            android:id="@+id/etP"
+            android:text="0"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:maxLines="1"
+            android:inputType="numberSigned"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="q :"/>
+        <EditText
+            android:id="@+id/etQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="14sp"
+            android:inputType="numberSigned"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="r :"/>
+        <EditText
+            android:id="@+id/etR"
+            android:layout_width="wrap_content"
+            android:inputType="numberSigned"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnSet"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="Set"
+            android:visibility="gone"
+            android:textColor="@color/color_yellow"
+            android:layout_marginLeft="16dp"
+            android:textAllCaps="false"
+            android:background="@drawable/gradient_button2"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+       android:padding="8dp"
+        android:weightSum="3">
+        <Button
+            android:id="@+id/btnRotX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotate X"
+            android:background="@drawable/gradient_button1"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/btnRotY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotate Y"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/gradient_button1"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/btnRotZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotate Z"
+            android:layout_margin="5dp"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:background="@drawable/gradient_button1"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
